@@ -6,16 +6,16 @@
 </head>
 <body class="bg-pink-100 h-screen flex items-center justify-center font-sans">
 
-<div class="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg relative">
+<div class="absolute top-4 right-4">
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="text-sm font-semibold text-gray-500 hover:text-pink-600 transition">
+            Logout
+        </button>
+    </form>
+</div>
 
-    <div class="absolute top-4 right-4">
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button type="submit" class="text-sm font-semibold text-gray-500 hover:text-pink-600 transition">
-                Logout
-            </button>
-        </form>
-    </div>
+<div class="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg">
 
     <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Task Manager</h1>
 
